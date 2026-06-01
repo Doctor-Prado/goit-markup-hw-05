@@ -351,7 +351,7 @@ ul {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2e2f42;
+  color: var(--navy-blue);
   text-transform: capitalize;
   margin-bottom: 72px;
 }
@@ -411,7 +411,7 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--navy-blue);
   margin-bottom: 8px;
 }
 
@@ -513,7 +513,9 @@ ul {
 .modal-field {
   margin-bottom: 8px;
 }
-
+.modal-comment-field {
+  margin-bottom: 16px;
+}
 .modal-label {
   display: block;
   margin-bottom: 4px;
