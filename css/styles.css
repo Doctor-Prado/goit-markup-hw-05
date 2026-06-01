@@ -453,8 +453,6 @@ ul {
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 24px;
-  height: 24px;
   background-color: #e7e9fc;
   border: none;
   border-radius: 50%;
@@ -462,6 +460,13 @@ ul {
   line-height: 1;
   color: #434455;
   cursor: pointer;
+}
+.modal-close-icon {
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-title {
