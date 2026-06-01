@@ -435,6 +435,7 @@ ul {
 .modal-backdrop.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
@@ -450,57 +451,69 @@ ul {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
+  padding: 72px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
   background-color: #e7e9fc;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  font-size: 24px;
-  line-height: 1;
-  color: #434455;
+  padding: 0;
   cursor: pointer;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 .modal-close-icon {
-  border: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff;
 }
 
 .modal-title {
-  margin: 72px auto 0 24px;
-  padding: 72px 24px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 .modal-form {
   display: flex;
   flex-direction: column;
-  margin: 16px 24px;
 }
 
 .modal-field {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .modal-label {
-  margin: 8px 0px 4px;
+  display: block;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #434455;
+  color: #8e8f99;
 }
 
 /**/
@@ -510,7 +523,8 @@ ul {
 
 .modal-input {
   padding-left: 38px;
-  width: 360px;
+  width: 100%;
+
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -535,13 +549,9 @@ ul {
   fill: #4d5ae5;
 }
 
-.modal-input:focus {
-  border: 1px solid #4d5ae5;
-}
-
 /**/
 .modal-textarea {
-  width: 360px;
+  width: 100%;
   height: 120px;
   padding: 8px 16px;
   resize: none;
@@ -549,9 +559,15 @@ ul {
   border-radius: 4px;
   outline: transparent;
   background-color: transparent;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .modal-textarea::placeholder {
